@@ -2,6 +2,7 @@
 ## 简介
 
 这是一款为 Obsidian 设计的自定义 CSS 代码片段，作用是在 H1~H6 各级标题左侧添加彩色小色块标记，帮助快速区分标题层级。片段同时兼容**编辑模式（实时预览 / 源码模式）**与**阅读模式**。
+<img width="236" height="487" alt="image" src="https://github.com/user-attachments/assets/3f29cfd6-1259-45f0-9789-abea4b2f96d5" />
 
 ## 功能特性
 
