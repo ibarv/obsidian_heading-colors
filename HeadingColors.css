@@ -1,0 +1,118 @@
+:root {
+  /* ---- 色块尺寸 ---- */
+  --marker-width: 8px;
+  --marker-height: 10px;
+  --marker-radius: 2px;
+
+  /* ---- 位置偏移（负值左移） ---- */
+  --marker-left: -14px;          /* 编辑模式下的水平偏移 */
+  --marker-vertical: 0px;        /* 垂直微调（正值下移，负值上移） */
+
+  /* ---- 阅读模式水平补偿（请根据实际情况调整） ---- */
+  --reading-left-adjust: -1px;    /* 负值向左移，正值向右移 */
+  /* 如果你发现阅读模式下色块向右偏，请将此值改为负数，例如 -10px */
+
+  /* ---- 阅读模式开关（1=开启，0=关闭） ---- */
+  --show-reading-markers: 1;
+
+  /* ---- 标题行高（统一数值，消除模式偏移） ---- */
+  --heading-line-height: 1.37;    /* 可根据主题调整，1.6 为常见值，1.37为obsidian默认值 */
+
+  /* ---- 各层级颜色（下面会覆盖） ---- */
+  --marker-color: #FF6B6B;
+}
+
+/* 强制统一内边距和行高（编辑模式 + 实时预览） */
+.cm-line:has(.cm-header-1),
+.cm-line:has(.cm-header-2),
+.cm-line:has(.cm-header-3),
+.cm-line:has(.cm-header-4),
+.cm-line:has(.cm-header-5),
+.cm-line:has(.cm-header-6) {
+  padding-top: 0 !important;
+  padding-bottom: 0 !important;
+  line-height: var(--heading-line-height) !important;
+}
+
+/* 第一部分：编辑模式（Live Preview / Source） */
+
+div.cm-line:has(.cm-header-1),
+div.cm-line:has(.cm-header-2),
+div.cm-line:has(.cm-header-3),
+div.cm-line:has(.cm-header-4),
+div.cm-line:has(.cm-header-5),
+div.cm-line:has(.cm-header-6) {
+  position: relative;
+}
+
+div.cm-line:has(.cm-header-1)::after,
+div.cm-line:has(.cm-header-2)::after,
+div.cm-line:has(.cm-header-3)::after,
+div.cm-line:has(.cm-header-4)::after,
+div.cm-line:has(.cm-header-5)::after,
+div.cm-line:has(.cm-header-6)::after {
+  content: '';
+  position: absolute;
+  left: var(--marker-left, -14px);
+  top: calc(50% + var(--marker-vertical, 0px));
+  transform: translateY(-50%);
+  width: var(--marker-width, 8px);
+  height: var(--marker-height, 10px);
+  border-radius: var(--marker-radius, 2px);
+  background-color: var(--marker-color);
+  pointer-events: none;
+  z-index: 0;
+}
+
+/* 编辑模式各层级颜色 */
+div.cm-line:has(.cm-header-1)::after { --marker-color: #FF6B6B; }
+div.cm-line:has(.cm-header-2)::after { --marker-color: #4ECDC4; }
+div.cm-line:has(.cm-header-3)::after { --marker-color: #FFE66D; }
+div.cm-line:has(.cm-header-4)::after { --marker-color: #A8E6CF; }
+div.cm-line:has(.cm-header-5)::after { --marker-color: #DDA0DD; }
+div.cm-line:has(.cm-header-6)::after { --marker-color: #FFB347; }
+
+
+/* 第二部分：阅读模式（由 --show-reading-markers 控制） */
+
+/* 强制标题左边界归零，与编辑模式对齐（但保留补偿变量） */
+.markdown-preview-view h1,
+.markdown-preview-view h2,
+.markdown-preview-view h3,
+.markdown-preview-view h4,
+.markdown-preview-view h5,
+.markdown-preview-view h6 {
+  margin-left: 0 !important;
+  padding-left: 0 !important;
+  position: relative;
+  line-height: var(--heading-line-height) !important;
+}
+
+.markdown-preview-view h1::before,
+.markdown-preview-view h2::before,
+.markdown-preview-view h3::before,
+.markdown-preview-view h4::before,
+.markdown-preview-view h5::before,
+.markdown-preview-view h6::before {
+  content: '';
+  position: absolute;
+  /* 关键：编辑模式偏移 + 阅读模式独立补偿 */
+  left: calc(var(--marker-left, -14px) + var(--reading-left-adjust, 0px));
+  top: calc(50% + var(--marker-vertical, 0px));
+  transform: translateY(-50%);
+  width: var(--marker-width, 8px);
+  height: var(--marker-height, 10px);
+  border-radius: var(--marker-radius, 2px);
+  background-color: var(--marker-color);
+  pointer-events: none;
+  z-index: 0;
+  opacity: var(--show-reading-markers, 1);
+}
+
+/* 阅读模式各层级颜色 */
+.markdown-preview-view h1::before { --marker-color: #FF6B6B; }
+.markdown-preview-view h2::before { --marker-color: #4ECDC4; }
+.markdown-preview-view h3::before { --marker-color: #FFE66D; }
+.markdown-preview-view h4::before { --marker-color: #A8E6CF; }
+.markdown-preview-view h5::before { --marker-color: #DDA0DD; }
+.markdown-preview-view h6::before { --marker-color: #FFB347; }
