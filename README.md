@@ -2,7 +2,11 @@
 ## 简介
 
 这是一款为 Obsidian 设计的自定义 CSS 代码片段，作用是在 H1~H6 各级标题左侧添加彩色小色块标记，帮助快速区分标题层级。片段同时兼容**编辑模式（实时预览 / 源码模式）**与**阅读模式**。
-[就像这样](https://github.com/IBARUI/heading-colors/blob/main/01.png)
+
+<p align="center">
+<img src="01.png" alt="效果演示" width="650" style="transform: rotate(90deg);transform-origin:center;margin:40px 0;">
+</p>
+
 ## 功能特性
 
 - 为六级标题分别配置独立的标识色，视觉层级清晰
