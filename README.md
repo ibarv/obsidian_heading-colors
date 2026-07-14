@@ -7,37 +7,46 @@ This is a custom CSS snippet built for Obsidian. It adds small colored blocks to
 ## Features 功能特性
 
 Separate unique marker colors for H1-H6, bringing clear visual hierarchy
+
 为六级标题分别配置独立的标识色，视觉层级清晰
 
 Fully customizable block size, border radius and position via CSS variables
+
 色块尺寸、圆角、位置均可通过 CSS 变量自由自定义
   
 Unified heading line height to minimize visual offset between Edit and Reading Mode
+
 统一标题行高，最大程度消除编辑与阅读模式的视觉偏移
 
 Toggle markers visibility in Reading Mode independently
+
 支持独立开关阅读模式的色块显示
 
 Horizontal offset adjustment for Reading Mode to fit various themes
+
 提供阅读模式水平位置补偿参数，适配不同主题风格
 
 ## Installation Guide 安装方法
 
 Save the file HeadingColors.css to your local computer.  
+
 将 HeadingColors.css 文件保存到本地
 
 Open your Obsidian vault folder and navigate to .obsidian/snippets (create the folder manually if it does not exist).
+
 打开你的 Obsidian 库目录，进入 .obsidian/snippets 文件夹（若文件夹不存在请手动创建）
 
 Put HeadingColors.css into the snippets folder.
-把 HeadingColors.css 放入该文件夹
+
 
 Open Obsidian → Settings → Appearance, find the CSS Snippets section, click refresh, then enable HeadingColors.
+
 打开 Obsidian → 设置 → 外观，找到「CSS 代码片段」区域，点击刷新按钮，开启 HeadingColors 即可生效
 
 ## Configuration Instructions 配置说明
 
 All adjustable parameters are defined in the `:root` variables at the top of the CSS file. Modify the values directly to take effect globally.
+
 所有可调参数均定义在文件顶部的 `:root` 变量中，直接修改对应数值即可全局生效。
 
 ### 1. Basic Marker Size 色块基础尺寸
@@ -82,8 +91,6 @@ Separate colors are assigned for Edit Mode and Reading Mode. Replace `marker-col
 片段中分别为编辑模式与阅读模式配置了六级标题颜色，找到对应层级的 `marker-color` 替换为目标色值即可自定义配色。
 
 Default color palette 默认配色方案：
-
-表格
 
 |Heading Level 标题层级|Color Code 颜色色值|Color Description 色彩描述|
 |---|---|---|
