@@ -77,4 +77,4 @@ css
 |H5|`#DDA0DD`|淡紫色|
 |H6|`#FFB347`|浅橙色|
 
-![标题色块效果演示](01.png)
+![标题色块效果演示](https://github.com/IBARUI/heading-colors/blob/main/01.jpg)
