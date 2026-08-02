@@ -1,4 +1,4 @@
-![示例图片](SamplePicture.jpg)
+![示例图片](docs/SamplePicture.jpg)
 
 # Heading Colors
 

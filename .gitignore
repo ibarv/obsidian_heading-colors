@@ -1,6 +1,3 @@
 node_modules/
 *.js.map
 .DS_Store
-
-# 原始 CSS 片段（已转为 styles.css）
-HeadingColors.css
