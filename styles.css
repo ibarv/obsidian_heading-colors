@@ -65,12 +65,12 @@ div.cm-line:has(.cm-header-6)::after {
 }
 
 /* 编辑模式各层级颜色 */
-div.cm-line:has(.cm-header-1)::after { --marker-color: #FF6B6B; }
-div.cm-line:has(.cm-header-2)::after { --marker-color: #4ECDC4; }
-div.cm-line:has(.cm-header-3)::after { --marker-color: #FFE66D; }
-div.cm-line:has(.cm-header-4)::after { --marker-color: #A8E6CF; }
-div.cm-line:has(.cm-header-5)::after { --marker-color: #DDA0DD; }
-div.cm-line:has(.cm-header-6)::after { --marker-color: #FFB347; }
+div.cm-line:has(.cm-header-1)::after { --marker-color: var(--h1Color, #FF6B6B); }
+div.cm-line:has(.cm-header-2)::after { --marker-color: var(--h2Color, #4ECDC4); }
+div.cm-line:has(.cm-header-3)::after { --marker-color: var(--h3Color, #FFE66D); }
+div.cm-line:has(.cm-header-4)::after { --marker-color: var(--h4Color, #A8E6CF); }
+div.cm-line:has(.cm-header-5)::after { --marker-color: var(--h5Color, #DDA0DD); }
+div.cm-line:has(.cm-header-6)::after { --marker-color: var(--h6Color, #FFB347); }
 
 
 /* 第二部分：阅读模式（由 --show-reading-markers 控制） */
@@ -110,9 +110,9 @@ div.cm-line:has(.cm-header-6)::after { --marker-color: #FFB347; }
 }
 
 /* 阅读模式各层级颜色 */
-.markdown-preview-view h1::before { --marker-color: #FF6B6B; }
-.markdown-preview-view h2::before { --marker-color: #4ECDC4; }
-.markdown-preview-view h3::before { --marker-color: #FFE66D; }
-.markdown-preview-view h4::before { --marker-color: #A8E6CF; }
-.markdown-preview-view h5::before { --marker-color: #DDA0DD; }
-.markdown-preview-view h6::before { --marker-color: #FFB347; }
+.markdown-preview-view h1::before { --marker-color: var(--h1Color, #FF6B6B); }
+.markdown-preview-view h2::before { --marker-color: var(--h2Color, #4ECDC4); }
+.markdown-preview-view h3::before { --marker-color: var(--h3Color, #FFE66D); }
+.markdown-preview-view h4::before { --marker-color: var(--h4Color, #A8E6CF); }
+.markdown-preview-view h5::before { --marker-color: var(--h5Color, #DDA0DD); }
+.markdown-preview-view h6::before { --marker-color: var(--h6Color, #FFB347); }
