@@ -1,3 +1,17 @@
+# Dependencies
 node_modules/
+
+# Build artifacts
 *.js.map
+main.js
+
+# IDE / OS
 .DS_Store
+Thumbs.db
+
+# Claude Code
+.claude/
+.superpowers/
+
+# Design docs (internal, not shipped with plugin)
+docs/superpowers/
