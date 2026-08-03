@@ -2,7 +2,7 @@
   "id": "heading-colors",
   "name": "Heading Colors",
   "version": "0.1.1",
-  "minAppVersion": "0.15.0",
+  "minAppVersion": "1.0.0",
   "description": "Adds colored markers to heading levels (H1-H6) to help distinguish them at a glance.",
   "author": "IBARUI",
   "authorUrl": "https://github.com/ibarv",

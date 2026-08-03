@@ -31,7 +31,7 @@ export class HeadingColorsSettingTab extends PluginSettingTab {
 		const { containerEl } = this;
 		containerEl.empty();
 
-		containerEl.createEl('h2', { text: 'Heading Colors' });
+		new Setting(containerEl).setName('Heading Colors').setHeading();
 
 		const colorSettings: Array<{
 			key: keyof HeadingColorsPlugin['settings'];
