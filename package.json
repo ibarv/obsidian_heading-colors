@@ -1,6 +1,6 @@
 {
   "name": "obsidian-heading-colors",
-  "version": "0.1.1",
+  "version": "1.0.0",
   "description": "Adds colored markers to heading levels (H1-H6) to help distinguish them at a glance.",
   "main": "main.js",
   "scripts": {
